@@ -35,12 +35,18 @@ if __name__ == "__main__":
     _, ax = plt.subplots(1, figsize=(24, 12))
     ax.axis("off")
 
+    # The line below plots by quantiles (mapclassify).
+    # https://github.com/pysal/mapclassify
     #geo_df.plot(column="PLAYER_COUNT", ax=ax, scheme="quantiles", legend=True, cmap="Oranges", edgecolor="0.8")
+
+    # The lines below demonstrate the following:
+    #   a. Filtering out states.
+    #   b. Labeling states with data.
     geo_df.plot(column="PLAYER_COUNT", ax=ax, legend=True, cmap="Oranges", edgecolor="0.8")
 
     for idx, row in geo_df.iterrows():
         if row.PLAYER_COUNT >= 100:
-            label = f'{row["STATE"]} ({row["PLAYER_COUNT"]})'
+            label = f'{row.STATE} ({row.PLAYER_COUNT})'
             plt.text(row.COORDS[0], row.COORDS[1], s=label, horizontalalignment='center')
 
     plt.show()
