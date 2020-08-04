@@ -1,0 +1,7 @@
+beautifulsoup4
+descartes
+geopandas
+mapclassify
+matplotlib
+pandas
+requests
