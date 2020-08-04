@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pycharm/venv
+.idea/
+Scripts/
+Lib/
+pyenv.cfg
+
+# Shapefiles
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shp.ea.iso.xml
+*.shp.iso.xml
+*.shx
